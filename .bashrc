@@ -14,7 +14,7 @@
 #
 ###################################
 
-export PS1='\[$(tput bold)\]\[$(tput setaf 1)\W\[$(tput sgr0)\] $ '
+export PS1='\e[1;31m\]\W\[\e[m\] $ '
 export LANG='en_US.UTF-8'
 export LC_COLLATE='C'
 export QT_QPA_PLATFORMTHEME='qt5ct'
