@@ -30,7 +30,7 @@ printf '<device screen="0" driver="dri2">
 
 printf '#!/usr/bin/env bash
 
-redshift -P -O 4000K &
+redshift -P -O 3500K &
 ~/.fehbg &
 pipewire &
 slstatus &
