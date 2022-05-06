@@ -71,7 +71,6 @@ Xft.hintstyle:  hintfull
 Xft.lcdfilter:  lcddefault
 
 *.font:         Roboto Mono:pixelsize=18:antialias=true:autohint=true
-*.font2:        Font Awesome 5 Free Solid:pixelsize=18:antialias=true:autohint=true
 *.shell:        /bin/sh
 *.cwscale:      1.0
 *.chscale:      1.0
