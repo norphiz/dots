@@ -15,19 +15,6 @@
 #
 ###################################
 
-printf '<device screen="0" driver="dri2">
-    <application name="Default">
-        <option name="vblank_mode" value="0"/>
-    </application>
-</device>
-
-<device driver="i915">
-    <application name="Default">
-        <option name="stub_occlusion_query" value="true" />
-        <option name="fragment_shader" value="true" />
-    </application>
-</device>' > /etc/drirc
-
 printf '#!/usr/bin/env bash
 
 redshift -P -O 3500K &
@@ -41,9 +28,6 @@ pipewire-pulse &
 xrdb ~/.Xdefaults
 
 exec dbus-launch --exit-with-session dwm' > /home/$(logname)/.xinitrc
-
-printf '
-LIBGL_DRI3_DISABLE=1' >> /etc/environment
 
 printf '
 startx > /dev/null 2>&1' >> /home/$(logname)/.bash_profile
