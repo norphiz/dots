@@ -70,38 +70,6 @@ Include = /etc/pacman.d/mirrorlist-arch
 [community]
 Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
 
-pacman -Sy; pacman -S --noconfirm --needed autoconf automake binutils bison esysusers etmpfiles fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make patch pkgconf sed texinfo which xorg-server xorg-xinit libxft xf86-video-intel ttf-roboto-mono ttf-font-awesome cantarell-fonts noto-fonts gtk-engines gtk-engine-murrine mandoc redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip
-
-printf 'Section "Device"
-    Identifier "Intel Graphics"
-    Driver "intel"
-    Option "DRI" "2"
-    Option "VSync" "0"
-    Option "TripleBuffer" "0"
-    Option "SwapbuffersWait" "0"
-EndSection
-
-Section "ServerFlags"
-    Option "StandbyTime" "0"
-    Option "SuspendTime" "0"
-    Option "BlankTime" "0"
-    Option "OffTime" "0"
-EndSection
-
-Section "InputClass"
-    Identifier "My Mouse"
-    Option "AccelSpeed" "-1"
-    Option "AccelerationProfile" "-1"
-    Option "AccelerationScheme" "none"
-Endsection
-
-Section "InputClass"
-    Identifier "system-keyboard"
-    Option "XkbLayout" "br"
-EndSection
-
-Section "Extensions"
-    Option "DPMS" "0"
-Endsection' > /etc/X11/xorg.conf
+pacman -Sy; pacman -S --noconfirm --needed autoconf automake binutils bison esysusers etmpfiles fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make patch pkgconf sed texinfo which xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome cantarell-fonts noto-fonts gtk-engines gtk-engine-murrine mandoc redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip
 
 git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc/autoload/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim; cd /home/$(logname)/.config/dwm/; make -j$(nproc) clean install; cd /home/$(logname)/.config/dmenu/; make -j$(nproc) clean install; cd /home/$(logname)/.config/st/; make -j$(nproc) clean install; cd /home/$(logname)/.config/slstatus/; make -j$(nproc) clean install; cd /home/$(logname)/; startx
