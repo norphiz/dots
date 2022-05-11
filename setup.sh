@@ -19,12 +19,8 @@ printf '#!/usr/bin/env bash
 
 redshift -P -O 3500K &
 ~/.fehbg &
-pipewire &
 slstatus &
 wireplumber &
-pipewire-alsa &
-pipewire-jack &
-pipewire-pulse &
 xrdb ~/.Xdefaults
 
 exec dbus-launch --exit-with-session dwm' > /home/$(logname)/.xinitrc
@@ -70,6 +66,20 @@ Include = /etc/pacman.d/mirrorlist-arch
 [community]
 Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
 
-pacman -Sy; pacman -S --noconfirm --needed autoconf automake binutils bison esysusers etmpfiles fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make patch pkgconf sed texinfo which xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome cantarell-fonts noto-fonts gtk-engines gtk-engine-murrine mandoc redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip
+pacman -Sy; pacman -S --noconfirm --needed autoconf automake binutils bison esysusers etmpfiles fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make patch pkgconf sed texinfo which xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome cantarell-fonts noto-fonts gtk-engines gtk-engine-murrine mandoc redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip xf86-video-intel gnome-themes-extra
 
-git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc/autoload/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim; cd /home/$(logname)/.config/dwm/; make -j$(nproc) clean install; cd /home/$(logname)/.config/dmenu/; make -j$(nproc) clean install; cd /home/$(logname)/.config/st/; make -j$(nproc) clean install; cd /home/$(logname)/.config/slstatus/; make -j$(nproc) clean install; cd /home/$(logname)/; startx
+printf 'Section "InputClass"
+	Identifier "My Mouse"
+	Option "AccelerationProfile" "-1"
+	Option "AccelerationScheme" "none"
+	Option "AccelSpeed" "-1"
+Endsection
+
+Section "InputClass"
+	Identifier "system-keyboard"
+	Option "XkbLayout" "br"
+Endsection' > /etc/X11/xorg.conf
+
+git clone https://github.com/catppuccin/nvim /home/$(logname)/nvim/; mv /home/$(logname)/nvim/colors/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/catppuccin/lua/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/nvim/; cd /home/$(logname)/.config/dwm/; make -j$(nproc) clean install; cd /home/$(logname)/.config/dmenu/; make -j$(nproc) clean install; cd /home/$(logname)/.config/st/; make -j$(nproc) clean install; cd /home/$(logname)/.config/slstatus/; make -j$(nproc) clean install; cd /home/$(logname)/; clear
+
+printf 'everything done, now run startx.'
