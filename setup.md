@@ -56,9 +56,9 @@ WINEPREFIX=~/Games/osu WINEARCH=win32 WINE=~/.local/share/lutris/runners/wine/lu
 
 ### 8. Virt-Manager Setup
 ```shell
-doas pacman -S --needed virt-manager qemu libvirt-dinit edk2-ovmf iptables-nft dnsmasq bridge-utils openbsd-netcat
+doas pacman -S --needed virt-manager qemu-base libvirt-dinit edk2-ovmf iptables-nft dnsmasq dmidecode openbsd-netcat openssh
 ```
 
 ```shell
-doas virsh net-start default; doas virsh net-autostart default; doas usermod -aG libvirt $USER
+doas virsh net-start default; doas virsh net-autostart default; doas usermod -aG libvirt $USER; doas dinitctl enable libvirtd; doas dinitctl enable virtlogd
 ```
