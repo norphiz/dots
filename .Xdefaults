@@ -25,42 +25,42 @@
 ! 6 Cyan      14 Cyan
 ! 7 White     15 White
 
-! special
-*.foreground:   #dfe5f2
-*.background:   #21242b
-*.cursorColor:  #dfe5f2
+
+*.foreground:   #dadae8
+*.background:   #1e1e29
+*.cursorColor:  #b1e3ad
 
 ! black
-*.color0:       #5c6370
-*.color8:       #5c6370
+*.color0:       #6e6c7e
+*.color8:       #6e6c7e
 
 ! red
-*.color1:       #ff6e7a
-*.color9:       #ff6e7a
+*.color1:       #e38c8f
+*.color9:       #e38c8f
 
 ! green
-*.color2:       #c0fa96
-*.color10:      #c0fa96
+*.color2:       #b1e3ad
+*.color10:      #b1e3ad
 
 ! yellow
-*.color3:       #ffd587
-*.color11:      #ffd587
+*.color3:       #ebddaa
+*.color11:      #ebddaa
 
 ! blue
-*.color4:       #6ebeff
-*.color12:      #6ebeff
+*.color4:       #a4b9ef
+*.color12:      #a4b9ef
 
 ! magenta
-*.color5:       #e387ff
-*.color13:      #e387ff
+*.color5:       #c6aae8
+*.color13:      #c6aae8
 
 ! cyan
-*.color6:       #66deed
-*.color14:      #66deed
+*.color6:       #e5b4e2
+*.color14:      #e5b4e2
 
 ! white
-*.color7:       #dfe5f2
-*.color15:      #dfe5f2
+*.color7:       #dadae8
+*.color15:      #dadae8
 
 Xft.dpi:        96
 Xft.rgba:       rgb
@@ -70,11 +70,11 @@ Xft.antialias:  true
 Xft.hintstyle:  hintfull
 Xft.lcdfilter:  lcddefault
 
-*.font:         Roboto Mono:pixelsize=18:antialias=true:autohint=true
+*.font:         Roboto Mono:pixelsize=22:antialias=true:autohint=true
 *.shell:        /bin/sh
 *.cwscale:      1.0
 *.chscale:      1.0
-*.borderpx:     18
+*.borderpx:     22
 *.termname:     st-256color
 *.tabspaces:    8
 *.minlatency:   8
