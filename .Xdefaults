@@ -125,7 +125,7 @@ URxvt.perl-ext-common: default,matcher,resize-font,url-select,clipboard,keyboard
 URxvt.keysym.M-y: perl:url-select:select_next
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.url-launcher: /usr/bin/librewolf
+URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt.resize-font.smaller: C-j
 URxvt.resize-font.bigger: C-k
