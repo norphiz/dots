@@ -20,10 +20,9 @@ printf '#!/usr/bin/env bash
 redshift -P -O 3500K &
 ~/.fehbg &
 slstatus &
-wireplumber &
 xrdb ~/.Xdefaults
 
-exec dbus-launch --exit-with-session dwm' > /home/$(logname)/.xinitrc
+exec dwm' > /home/$(logname)/.xinitrc
 
 printf '
 startx > /dev/null 2>&1' >> /home/$(logname)/.bash_profile
@@ -66,7 +65,7 @@ Include = /etc/pacman.d/mirrorlist-arch
 [community]
 Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
 
-pacman -Sy; pacman -S --noconfirm --needed autoconf automake binutils bison esysusers etmpfiles fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make patch pkgconf sed texinfo which xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome cantarell-fonts noto-fonts gtk-engines gtk-engine-murrine man-db redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip xf86-video-intel gnome-themes-extra
+pacman -Sy; pacman -S --noconfirm --needed gcc make pkgconf xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome noto-fonts gtk-engines gtk-engine-murrine man-db redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip xf86-video-intel gnome-themes-extra
 
 printf 'Section "InputClass"
 	Identifier "My Mouse"
