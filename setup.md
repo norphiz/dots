@@ -8,7 +8,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=0 console=tty2 udev.log_level=0 intel_idle.
 
 ### 2. Blacklist
 
-`/etc/modpribe.d/blacklist.conf`
+`/etc/modprobe.d/blacklist.conf`
 
 ```shell
 install btusb /bin/true
@@ -56,7 +56,7 @@ WINEPREFIX=~/Games/osu WINEARCH=win32 WINE=~/.local/share/lutris/runners/wine/lu
 
 ### 8. Virt-Manager Setup
 ```shell
-doas pacman -S --needed virt-manager qemu-base libvirt-dinit edk2-ovmf iptables-nft dnsmasq dmidecode openbsd-netcat openssh
+doas pacman -S --needed virt-manager qemu-full libvirt-dinit iptables-nft dmidecode openbsd-netcat
 ```
 
 ```shell
