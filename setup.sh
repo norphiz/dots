@@ -27,8 +27,6 @@ exec dwm' > /home/$(logname)/.xinitrc
 printf '
 startx > /dev/null 2>&1' >> /home/$(logname)/.bash_profile
 
-pacman -S --noconfirm artix-archlinux-support; pacman-key --populate archlinux
-
 printf '[options]
 HoldPkg = pacman glibc
 Architecture = auto
@@ -59,13 +57,13 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 #[lib32]
 #Include = /etc/pacman.d/mirrorlist
 
-[extra]
-Include = /etc/pacman.d/mirrorlist-arch
+#[extra]
+#Include = /etc/pacman.d/mirrorlist-arch
 
-[community]
-Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
+#[community]
+#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
 
-pacman -Sy; pacman -S --noconfirm --needed gcc make pkgconf xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome noto-fonts gtk-engines gtk-engine-murrine man-db redshift capitaine-cursors arc-solid-gtk-theme arc-icon-theme lxappearance xclip xf86-video-intel gnome-themes-extra
+pacman -Sy; pacman -S --noconfirm --needed gcc make pkgconf xorg-server xorg-xinit libxft ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-solid-gtk-theme arc-icon-theme lxappearance xclip xf86-video-intel gnome-themes-extra
 
 printf 'Section "InputClass"
 	Identifier "My Mouse"
@@ -79,6 +77,6 @@ Section "InputClass"
 	Option "XkbLayout" "br"
 Endsection' > /etc/X11/xorg.conf
 
-git clone https://github.com/catppuccin/nvim /home/$(logname)/nvim/; mv /home/$(logname)/nvim/colors/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/catppuccin/lua/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/nvim/; cd /home/$(logname)/.config/dwm/; make -j$(nproc) clean install; cd /home/$(logname)/.config/dmenu/; make -j$(nproc) clean install; cd /home/$(logname)/.config/st/; make -j$(nproc) clean install; cd /home/$(logname)/.config/slstatus/; make -j$(nproc) clean install; cd /home/$(logname)/; clear
+git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/.config/dwm/; make -j$(nproc) clean install; cd /home/$(logname)/.config/dmenu/; make -j$(nproc) clean install; cd /home/$(logname)/.config/st/; make -j$(nproc) clean install; cd /home/$(logname)/.config/slstatus/; make -j$(nproc) clean install; cd /home/$(logname)/; clear
 
 printf 'everything done, now run startx.'
