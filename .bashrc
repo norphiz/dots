@@ -44,6 +44,7 @@ alias clean='doas rm -rf /var/cache/pacman/pkg/*'
 
 export LC_COLLATE='C'
 export LANG='en_US.UTF-8'
+export LS_COLORS='di=1;31'
 export LESS_TERMCAP_me=$'\e[0m'
 export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_ue=$'\e[0m'
