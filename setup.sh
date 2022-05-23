@@ -25,6 +25,8 @@ xrdb ~/.Xdefaults
 exec dwm' > /home/$(logname)/.xinitrc
 
 printf '
+clear
+
 startx > /dev/null 2>&1' >> /home/$(logname)/.bash_profile
 
 printf '[options]
