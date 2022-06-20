@@ -18,49 +18,49 @@
 ! --------    -------
 ! 0 Black      8 Black
 ! 1 Red        9 Red
-! 2 Yellow    10 Yellow
-! 3 Green     11 Green
+! 2 Green     10 Green
+! 3 Yellow    11 Yellow
 ! 4 Blue      12 Blue
 ! 5 Magenta   13 Magenta
 ! 6 Cyan      14 Cyan
 ! 7 White     15 White
 
 
-*.foreground:   #dadae8
-*.background:   #1e1e29
-*.cursorColor:  #b1e3ad
+*.foreground:   #dfe5f2
+*.background:   #21242b
+*.cursorColor:  #dfe5f2
 
 ! black
-*.color0:       #6e6c7e
-*.color8:       #6e6c7e
+*.color0:       #5c6370
+*.color8:       #5c6370
 
 ! red
-*.color1:       #e38c8f
-*.color9:       #e38c8f
+*.color1:       #ff6e7a
+*.color9:       #ff6e7a
 
 ! green
-*.color2:       #b1e3ad
-*.color10:      #b1e3ad
+*.color2:       #c0fa96
+*.color10:      #c0fa96
 
 ! yellow
-*.color3:       #ebddaa
-*.color11:      #ebddaa
+*.color3:       #ffd587
+*.color11:      #ffd587
 
 ! blue
-*.color4:       #a4b9ef
-*.color12:      #a4b9ef
+*.color4:       #6ebeff
+*.color12:      #6ebeff
 
 ! magenta
-*.color5:       #c6aae8
-*.color13:      #c6aae8
+*.color5:       #e387ff
+*.color13:      #e387ff
 
 ! cyan
-*.color6:       #e5b4e2
-*.color14:      #e5b4e2
+*.color6:       #66deed
+*.color14:      #66deed
 
 ! white
-*.color7:       #dadae8
-*.color15:      #dadae8
+*.color7:       #dfe5f2
+*.color15:      #dfe5f2
 
 Xft.dpi:        96
 Xft.rgba:       rgb
