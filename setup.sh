@@ -37,7 +37,7 @@ Server = https://ftp.crifo.org/artix-universe/
 #[community]
 #Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
 
-pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra
+pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra pcmanfm-gtk3
 
 printf '#!/usr/bin/env bash
 
@@ -60,7 +60,7 @@ Section "InputClass"
 	Option "XkbLayout" "br"
 Endsection' > /etc/X11/xorg.conf
 
-printf 'gtk-theme-name="Arc-Dark-solid"
+printf 'gtk-theme-name="Arc-Dark"
 gtk-icon-theme-name="Arc"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Adwaita"
@@ -69,11 +69,11 @@ gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=1
 gtk-menu-images=1
-gtk-enable-event-sounds=1
-gtk-enable-input-feedback-sounds=1
+gtk-enable-event-sounds=0
+gtk-enable-input-feedback-sounds=0
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
+gtk-xft-hintstyle="hintmedium"
 gtk-xft-rgba="rgb"' > /home/$(logname)/.gtkrc-2.0
 
 git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; clear
