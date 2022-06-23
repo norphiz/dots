@@ -1,19 +1,4 @@
-###################################
-#  ________
-# < bashrc >
-#  --------
-#    \
-#     \
-#         .--.
-#        |o_o |
-#        |:_/ |
-#       //   \ \
-#      (|     | )
-#     /'\_   _/`\
-#     \___)=(___/
-#
-###################################
-
+alias d='doas'
 alias h='htop'
 alias v='nvim'
 alias r='rm -rf'
@@ -21,22 +6,22 @@ alias l='ls -la'
 alias n='neofetch'
 alias mk='mkdir -p'
 alias c='curl -fLO'
-alias sv='sudo nvim'
-alias sr='sudo rm -rf'
-alias re='sudo reboot'
+alias dv='doas nvim'
+alias dr='doas rm -rf'
+alias re='doas reboot'
 alias wget='curl -fLO'
-alias sm='sudo mkdir -p'
-alias po='sudo poweroff'
-alias s='sudo pacman -Ss'
-alias p='sudo pacman -Syu'
+alias dm='doas mkdir -p'
+alias po='doas poweroff'
+alias s='doas pacman -Ss'
+alias p='doas pacman -Syu'
 alias g='git clone --depth 1'
-alias q='sudo pacman -Q | grep'
-alias i='sudo pacman -S --needed'
+alias q='doas pacman -Q | grep'
+alias i='doas pacman -S --needed'
 alias yy='xclip -selection clipboard'
-alias u='sudo pacman -Rns --noconfirm'
+alias u='doas pacman -Rns --noconfirm'
 alias startx='startx > /dev/null 2>&1'
 alias pp='xclip -selection clipboard -o'
-alias clean='sudo rm -rf /var/cache/pacman/pkg/*'
+alias clean='doas rm -rf /var/cache/pacman/pkg/*'
 
 export LC_COLLATE='C'
 export LANG='en_US.UTF-8'
