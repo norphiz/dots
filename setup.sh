@@ -35,9 +35,7 @@ Server = https://ftp.crifo.org/artix-universe/
 #Include = /etc/pacman.d/mirrorlist-arch
 
 #[community]
-#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf
-
-pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi sxhkd rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra pcmanfm-gtk3
+#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf; pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi sxhkd rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra pcmanfm-gtk3
 
 printf '#!/bin/sh
 
@@ -82,12 +80,8 @@ install btbcm /bin/true
 install btintel /bin/true
 install iTCO_wdt /bin/true
 install bluetooth /bin/true
-install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf
-
-mkdir -p /etc/iwd/
+install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf; mkdir -p /etc/iwd/
 
 printf '[General]
 AddressRandomization=true
-AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd
-
-git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; mv /home/$(logname)/.config/resize-font /usr/lib/urxvt/perl/; printf 'everything done, now run mkinitcpio -P and then startx.'
+AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd; git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; mv /home/$(logname)/.config/resize-font /usr/lib/urxvt/perl/; printf 'everything done, now run mkinitcpio -P and then startx.'
