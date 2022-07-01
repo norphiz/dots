@@ -39,12 +39,12 @@ Server = https://ftp.crifo.org/artix-universe/
 
 printf '#!/bin/sh
 
-exec bspwm' > /home/$(logname)/.xinitrc
+exec bspwm' > .xinitrc
 
 printf '
 clear
 
-startx > /dev/null 2>&1' >> /home/$(logname)/.bash_profile
+startx > /dev/null 2>&1' >> .bash_profile
 
 printf 'gtk-theme-name="Arc-Dark"
 gtk-icon-theme-name="Arc"
@@ -60,7 +60,7 @@ gtk-enable-input-feedback-sounds=0
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
-gtk-xft-rgba="rgb"' > /home/$(logname)/.gtkrc-2.0
+gtk-xft-rgba="rgb"' > .gtkrc-2.0
 
 printf 'Section "InputClass"
 	Identifier "My Mouse"
@@ -80,8 +80,8 @@ install btbcm /bin/true
 install btintel /bin/true
 install iTCO_wdt /bin/true
 install bluetooth /bin/true
-install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf; mkdir -p /etc/iwd/
+install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf; mkinitcpio -P; mkdir -p /etc/iwd/; git clone --depth 1 https://github.com/simmel/urxvt-resize-font.git; mv urxvt-resize-font/resize-font /usr/lib/urxvt/perl/; rm -rf urxvt-resize-font/; git clone --depth 1 https://github.com/pacokwon/onedarkhc.vim.git; mv onedarkhc.vim/colors/ .config/nvim/; mv onedarkhc.vim/autoload/ .config/nvim/; rm -rf onedarkhc.vim/
 
 printf '[General]
 AddressRandomization=true
-AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd; git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; mv /home/$(logname)/.config/resize-font /usr/lib/urxvt/perl/; printf 'everything done, now run mkinitcpio -P and then startx.'
+AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd; chmod +x .config/bspwm/*; chmod +x .config/polybar/launch.sh; printf 'everything done, now run startx.'
