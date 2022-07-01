@@ -9,41 +9,41 @@
 ! 6 Cyan      14 Cyan
 ! 7 White     15 White
 
-*.foreground:   #dfe5f2
-*.background:   #21242b
-*.cursorColor:  #dfe5f2
+*.foreground: #dfe5f2
+*.background: #21242b
+*.cursorColor: #dfe5f2
 
 ! black
-*.color0:       #5c6370
-*.color8:       #5c6370
+*.color0: #5c6370
+*.color8: #5c6370
 
 ! red
-*.color1:       #ff6e7a
-*.color9:       #ff6e7a
+*.color1: #ff6e7a
+*.color9: #ff6e7a
 
 ! green
-*.color2:       #c0fa96
-*.color10:      #c0fa96
+*.color2: #c0fa96
+*.color10: #c0fa96
 
 ! yellow
-*.color3:       #ffd587
-*.color11:      #ffd587
+*.color3: #ffd587
+*.color11: #ffd587
 
 ! blue
-*.color4:       #6ebeff
-*.color12:      #6ebeff
+*.color4: #6ebeff
+*.color12: #6ebeff
 
 ! magenta
-*.color5:       #e387ff
-*.color13:      #e387ff
+*.color5: #e387ff
+*.color13: #e387ff
 
 ! cyan
-*.color6:       #66deed
-*.color14:      #66deed
+*.color6: #66deed
+*.color14: #66deed
 
 ! white
-*.color7:       #dfe5f2
-*.color15:      #dfe5f2
+*.color7: #dfe5f2
+*.color15: #dfe5f2
 
 *.font: Roboto Mono:pixelsize=22:antialias=true:autohint=true
 *.shell: /bin/sh
