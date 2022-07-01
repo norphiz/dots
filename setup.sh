@@ -48,18 +48,6 @@ clear
 
 startx > /dev/null 2>&1' >> /home/$(logname)/.bash_profile
 
-printf 'Section "InputClass"
-	Identifier "My Mouse"
-	Option "AccelerationProfile" "-1"
-	Option "AccelerationScheme" "none"
-	Option "AccelSpeed" "-1"
-Endsection
-
-Section "InputClass"
-	Identifier "system-keyboard"
-	Option "XkbLayout" "br"
-Endsection' > /etc/X11/xorg.conf
-
 printf 'gtk-theme-name="Arc-Dark"
 gtk-icon-theme-name="Arc"
 gtk-font-name="Cantarell 11"
@@ -76,4 +64,24 @@ gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"' > /home/$(logname)/.gtkrc-2.0
 
-git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; mv /home/$(logname)/.config/resize-font /usr/lib/urxvt/perl/; printf 'everything done, now run startx.'
+printf 'Section "InputClass"
+	Identifier "My Mouse"
+	Option "AccelerationProfile" "-1"
+	Option "AccelerationScheme" "none"
+	Option "AccelSpeed" "-1"
+Endsection
+
+Section "InputClass"
+	Identifier "system-keyboard"
+	Option "XkbLayout" "br"
+Endsection' > /etc/X11/xorg.conf
+
+printf 'install btusb /bin/true
+install btrtl /bin/true
+install btbcm /bin/true
+install btintel /bin/true
+install iTCO_wdt /bin/true
+install bluetooth /bin/true
+install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf
+
+git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; mv /home/$(logname)/.config/resize-font /usr/lib/urxvt/perl/; printf 'everything done, now run mkinitcpio -P and then startx.'
