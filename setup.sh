@@ -35,7 +35,7 @@ Server = https://ftp.crifo.org/artix-universe/
 #Include = /etc/pacman.d/mirrorlist-arch
 
 #[community]
-#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf; pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi sxhkd rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra pcmanfm-gtk3
+#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf; pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi sxhkd rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra pcmanfm-gtk3; mkinitcpio -P; mkdir -p /etc/iwd/; git clone --depth 1 https://github.com/simmel/urxvt-resize-font.git; mv urxvt-resize-font/resize-font /usr/lib/urxvt/perl/; rm -rf urxvt-resize-font/; git clone --depth 1 https://github.com/pacokwon/onedarkhc.vim.git; mv onedarkhc.vim/colors/ .config/nvim/; mv onedarkhc.vim/autoload/ .config/nvim/; rm -rf onedarkhc.vim/; chmod +x .config/bspwm/*; chmod +x .config/polybar/launch.sh
 
 printf '#!/bin/sh
 
@@ -80,8 +80,8 @@ install btbcm /bin/true
 install btintel /bin/true
 install iTCO_wdt /bin/true
 install bluetooth /bin/true
-install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf; mkinitcpio -P; mkdir -p /etc/iwd/; git clone --depth 1 https://github.com/simmel/urxvt-resize-font.git; mv urxvt-resize-font/resize-font /usr/lib/urxvt/perl/; rm -rf urxvt-resize-font/; git clone --depth 1 https://github.com/pacokwon/onedarkhc.vim.git; mv onedarkhc.vim/colors/ .config/nvim/; mv onedarkhc.vim/autoload/ .config/nvim/; rm -rf onedarkhc.vim/
+install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf
 
 printf '[General]
 AddressRandomization=true
-AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd; chmod +x .config/bspwm/*; chmod +x .config/polybar/launch.sh; printf 'everything done, now run startx.'
+AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd; clear; printf 'run startx'
