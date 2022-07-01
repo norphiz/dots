@@ -84,4 +84,10 @@ install iTCO_wdt /bin/true
 install bluetooth /bin/true
 install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf
 
+mkdir -p /etc/iwd/
+
+printf '[General]
+AddressRandomization=true
+AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd
+
 git clone https://github.com/pacokwon/onedarkhc.vim /home/$(logname)/onedarkhc.vim/; mv /home/$(logname)/onedarkhc.vim/autoload/ /home/$(logname)/.config/nvim/; mv /home/$(logname)/onedarkhc.vim/colors/ /home/$(logname)/.config/nvim/; rm -rf /home/$(logname)/onedarkhc.vim/; cd /home/$(logname)/; mv /home/$(logname)/.config/resize-font /usr/lib/urxvt/perl/; printf 'everything done, now run mkinitcpio -P and then startx.'
