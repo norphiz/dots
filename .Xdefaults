@@ -9,67 +9,51 @@
 ! 6 Cyan      14 Cyan
 ! 7 White     15 White
 
+*.color0: #5c6370
+*.color1: #ff6e7a
+*.color2: #c0fa96
+*.color3: #ffd587
+*.color4: #6ebeff
+*.color5: #e387ff
+*.color6: #66deed
+*.color7: #dfe5f2
+*.color8: #5c6370
+*.color9: #ff6e7a
+*.color10: #c0fa96
+*.color11: #ffd587
+*.color12: #6ebeff
+*.color13: #e387ff
+*.color14: #66deed
+*.color15: #dfe5f2
 *.foreground: #dfe5f2
 *.background: #21242b
 *.cursorColor: #dfe5f2
 
-! black
-*.color0: #5c6370
-*.color8: #5c6370
-
-! red
-*.color1: #ff6e7a
-*.color9: #ff6e7a
-
-! green
-*.color2: #c0fa96
-*.color10: #c0fa96
-
-! yellow
-*.color3: #ffd587
-*.color11: #ffd587
-
-! blue
-*.color4: #6ebeff
-*.color12: #6ebeff
-
-! magenta
-*.color5: #e387ff
-*.color13: #e387ff
-
-! cyan
-*.color6: #66deed
-*.color14: #66deed
-
-! white
-*.color7: #dfe5f2
-*.color15: #dfe5f2
-
-*.font: Roboto Mono:pixelsize=22:antialias=true:autohint=true
-*.shell: /bin/sh
-*.cwscale: 1.0
-*.chscale: 1.0
-*.borderpx: 22
-*.termname: st-256color
-*.tabspaces: 8
-*.minlatency: 8
-*.maxlatency: 33
-*.bellvolume: 0
-*.blinktimeout: 800
-
-URxvt.font: xft:Roboto Mono:pixelsize=22
-URxvt.boldFont: xft:Roboto Mono:pixelsize=22
-URxvt.italicFont: xft:Roboto Mono:pixelsize=22
-URxvt.boldItalicFont: xft:Roboto Mono:pixelsize=22
-URxvt.internalBorder: 22
+URxvt.scrollBar: 0
 URxvt.cursorBlink: 1
 URxvt.saveline: 5000
-URxvt.scrollBar: 0
 URxvt.matcher.button: 1
-URxvt.perl-ext-common: resize-font,selection-to-clipboard
-URxvt.termName: rxvt-unicode-256color
+URxvt.internalBorder: 22
 URxvt.url-launcher: firefox
 URxvt.resize-font.show: C-End
 URxvt.resize-font.reset: C-Home
 URxvt.resize-font.bigger: C-Page_Up
+URxvt.termName: rxvt-unicode-256color
 URxvt.resize-font.smaller: C-Page_Down
+URxvt.perl-ext-common: resize-font,selection-to-clipboard
+URxvt.font: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true
+URxvt.boldFont: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true
+URxvt.italicFont: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true
+URxvt.boldItalicFont: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true
+
+st.cwscale: 1.0
+st.chscale: 1.0
+st.borderpx: 22
+st.tabspaces: 8
+st.minlatency: 8
+st.bellvolume: 0
+st.maxlatency: 33
+st.shell: /bin/sh
+st.blinktimeout: 800
+st.termname: st-256color
+st.font: Roboto Mono:pixelsize=22:antialias=true:autohint=true
