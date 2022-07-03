@@ -8,15 +8,15 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 Server = https://ftp.crifo.org/artix-universe/' > /etc/pacman.d/mirrorlist-universe
 
 printf '[options]
-HoldPkg = pacman glibc
-Architecture = auto
 Color
-CheckSpace
-ParallelDownloads = 5
 ILoveCandy
-
-SigLevel = Required DatabaseOptional
+CheckSpace
+Architecture = auto
+ParallelDownloads = 5
+DisableDownloadTimeout
+HoldPkg = pacman glibc
 LocalFileSigLevel = Optional
+SigLevel = Required DatabaseOptional
 
 [system]
 Include = /etc/pacman.d/mirrorlist
