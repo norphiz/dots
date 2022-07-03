@@ -1,5 +1,12 @@
 #!/bin/sh
 
+printf'Server = https://universe.artixlinux.org/$arch
+Server = https://mirror1.artixlinux.org/universe/$arch
+Server = https://mirror.pascalpuffke.de/artix-universe/$arch
+Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
+Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
+Server = https://ftp.crifo.org/artix-universe/' > /etc/pacman.d/mirrorlist-universe
+
 printf '[options]
 HoldPkg = pacman glibc
 Architecture = auto
@@ -21,12 +28,7 @@ Include = /etc/pacman.d/mirrorlist
 Include = /etc/pacman.d/mirrorlist
 
 [universe]
-Server = https://universe.artixlinux.org/$arch
-Server = https://mirror1.artixlinux.org/universe/$arch
-Server = https://mirror.pascalpuffke.de/artix-universe/$arch
-Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
-Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
-Server = https://ftp.crifo.org/artix-universe/
+Include = /etc/pacman.d/mirrorlist-universe
 
 #[lib32]
 #Include = /etc/pacman.d/mirrorlist
@@ -45,22 +47,6 @@ printf '
 clear
 
 startx > /dev/null 2>&1' >> .bash_profile
-
-printf 'gtk-theme-name="Arc-Dark"
-gtk-icon-theme-name="Arc"
-gtk-font-name="Cantarell 11"
-gtk-cursor-theme-name="Adwaita"
-gtk-cursor-theme-size=0
-gtk-toolbar-style=GTK_TOOLBAR_BOTH
-gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-gtk-button-images=1
-gtk-menu-images=1
-gtk-enable-event-sounds=0
-gtk-enable-input-feedback-sounds=0
-gtk-xft-antialias=1
-gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
-gtk-xft-rgba="rgb"' > .gtkrc-2.0
 
 printf 'Section "InputClass"
 	Identifier "My Mouse"
