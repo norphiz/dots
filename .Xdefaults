@@ -42,10 +42,10 @@ URxvt.resize-font.bigger: C-Page_Up
 URxvt.termName: rxvt-unicode-256color
 URxvt.resize-font.smaller: C-Page_Down
 URxvt.perl-ext-common: resize-font,selection-to-clipboard
-URxvt.font: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true:style=Regular
-URxvt.boldFont: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true:style=Bold
-URxvt.italicFont: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true:style=Italic
-URxvt.boldItalicFont: xft: Roboto Mono:pixelsize=22:antialias=true:autohint=true:style=Bold Italic
+URxvt.font: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Regular
+URxvt.boldFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Bold
+URxvt.italicFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Italic
+URxvt.boldItalicFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Bold Italic
 
 st.cwscale: 1.0
 st.chscale: 1.0
@@ -57,7 +57,7 @@ st.maxlatency: 33
 st.shell: /bin/sh
 st.blinktimeout: 800
 st.termname: st-256color
-st.font: Roboto Mono:pixelsize=22:antialias=true:autohint=true
+st.font: Roboto Mono:pixelsize=24:antialias=true:autohint=true
 
 Xft.dpi: 96
 Xft.rgba: rgb
