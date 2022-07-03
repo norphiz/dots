@@ -70,4 +70,5 @@ install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf; mkinitc
 
 printf '[General]
 AddressRandomization=true
-AddressRandomizationRange=nic' > /etc/iwd/iwd.conf; dinitctl restart iwd; clear; printf 'run startx'
+AddressRandomizationRange=nic
+EnableNetworkConfiguration=True' > /etc/iwd/main.conf; dinitctl restart iwd; clear; printf 'run startx'
