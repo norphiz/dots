@@ -41,7 +41,7 @@ Include = /etc/pacman.d/mirrorlist-universe
 
 printf '#!/bin/sh
 
-exec bspwm' > .xinitrc
+bspwm' > .xinitrc
 
 printf '
 clear
