@@ -68,6 +68,22 @@ install iTCO_wdt /bin/true
 install bluetooth /bin/true
 install iTCO_vendor_support /bin/true' > /etc/modprobe.d/blacklist.conf; mkinitcpio -P
 
+printf 'gtk-theme-name="Arc-Dark"
+gtk-icon-theme-name="Arc"
+gtk-font-name="Cantarell 11"
+gtk-cursor-theme-name="Adwaita"
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=0
+gtk-enable-input-feedback-sounds=0
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="rgb"' > .gtkrc-2.0
+
 printf '[General]
 AddressRandomization=true
 AddressRandomizationRange=nic
