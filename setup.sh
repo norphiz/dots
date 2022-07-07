@@ -37,7 +37,7 @@ Include = /etc/pacman.d/mirrorlist-universe
 #Include = /etc/pacman.d/mirrorlist-arch
 
 #[community]
-#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf; pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi sxhkd rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel gnome-themes-extra pcmanfm-gtk3; mkdir -p /etc/iwd/; git clone --depth 1 https://github.com/simmel/urxvt-resize-font.git; mv urxvt-resize-font/resize-font /usr/lib/urxvt/perl/; rm -rf urxvt-resize-font/; git clone --depth 1 https://github.com/pacokwon/onedarkhc.vim.git; mv onedarkhc.vim/colors/ .config/nvim/; mv onedarkhc.vim/autoload/ .config/nvim/; rm -rf onedarkhc.vim/; chmod +x .config/bspwm/*; chmod +x .config/polybar/launch.sh
+#Include = /etc/pacman.d/mirrorlist-arch' > /etc/pacman.conf; pacman -Sy; pacman -S --noconfirm --needed bspwm polybar rofi sxhkd rxvt-unicode xorg-server xorg-xinit xorg-xsetroot ttf-roboto-mono ttf-font-awesome gtk-engines gtk-engine-murrine man-db redshift arc-gtk-theme arc-icon-theme xclip xf86-video-intel alsa-utils; mkdir -p /etc/iwd/; git clone --depth 1 https://github.com/simmel/urxvt-resize-font.git; mv urxvt-resize-font/resize-font /usr/lib/urxvt/perl/; rm -rf urxvt-resize-font/; git clone --depth 1 https://github.com/pacokwon/onedarkhc.vim.git; mv onedarkhc.vim/colors/ .config/nvim/; mv onedarkhc.vim/autoload/ .config/nvim/; rm -rf onedarkhc.vim/; chmod +x .config/bspwm/*; chmod +x .config/polybar/launch.sh
 
 printf '#!/bin/sh
 
@@ -45,6 +45,10 @@ bspwm' > .xinitrc
 
 printf '
 clear
+
+amixer set Speaker 0 > /dev/null 2>&1
+
+amixer set Master 100 > /dev/null 2>&1
 
 startx > /dev/null 2>&1' >> .bash_profile
 
