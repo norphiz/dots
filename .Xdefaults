@@ -34,7 +34,7 @@ URxvt.cursorBlink: 1
 URxvt.saveline: 5000
 URxvt.letterSpace: -1
 URxvt.matcher.button: 1
-URxvt.internalBorder: 22
+URxvt.internalBorder: 24
 URxvt.url-launcher: firefox
 URxvt.resize-font.show: C-End
 URxvt.resize-font.reset: C-Home
@@ -49,7 +49,7 @@ URxvt.boldItalicFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true
 
 st.cwscale: 1.0
 st.chscale: 1.0
-st.borderpx: 22
+st.borderpx: 24
 st.tabspaces: 8
 st.minlatency: 8
 st.bellvolume: 0
