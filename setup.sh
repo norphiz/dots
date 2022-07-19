@@ -46,10 +46,6 @@ bspwm' > .xinitrc
 printf '
 clear
 
-amixer set Speaker 0 > /dev/null 2>&1
-
-amixer set Master 100 > /dev/null 2>&1
-
 startx > /dev/null 2>&1' >> .bash_profile
 
 printf 'Section "InputClass"
