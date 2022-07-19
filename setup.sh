@@ -53,15 +53,22 @@ amixer set Master 100 > /dev/null 2>&1
 startx > /dev/null 2>&1' >> .bash_profile
 
 printf 'Section "InputClass"
-	Identifier "My Mouse"
-	Option "AccelerationProfile" "-1"
-	Option "AccelerationScheme" "none"
-	Option "AccelSpeed" "-1"
+    Identifier "My Mouse"
+    Option "AccelSpeed" "-1"
+    Option "AccelerationProfile" "-1"
+    Option "AccelerationScheme" "none"
 Endsection
 
+Section "ServerFlags"
+    Option "OffTime" "0"
+    Option "BlankTime" "0"
+    Option "StandbyTime" "0"
+    Option "SuspendTime" "0"
+EndSection
+
 Section "InputClass"
-	Identifier "system-keyboard"
-	Option "XkbLayout" "br"
+    Option "XkbLayout" "br"
+    Identifier "My Keyboard"
 Endsection' > /etc/X11/xorg.conf
 
 printf 'install btusb /bin/true
