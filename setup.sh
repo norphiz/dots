@@ -49,7 +49,7 @@ clear
 startx > /dev/null 2>&1' >> .bash_profile
 
 printf 'Section "InputClass"
-    Identifier "My Mouse"
+    Identifier "Mouse0"
     Option "AccelSpeed" "-1"
     Option "AccelerationProfile" "-1"
     Option "AccelerationScheme" "none"
@@ -64,7 +64,7 @@ EndSection
 
 Section "InputClass"
     Option "XkbLayout" "br"
-    Identifier "My Keyboard"
+    Identifier "Keyboard0"
 Endsection' > /etc/X11/xorg.conf
 
 printf 'install btusb /bin/true
