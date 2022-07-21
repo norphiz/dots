@@ -91,6 +91,106 @@ gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"' > .gtkrc-2.0
 
+printf 'alias d="doas"
+alias h="htop"
+alias v="nvim"
+alias r="rm -rf"
+alias l="ls -la"
+alias n="neofetch"
+alias mk="mkdir -p"
+alias c="curl -fLO"
+alias dv="doas nvim"
+alias dr="doas rm -rf"
+alias re="doas reboot"
+alias wget="curl -fLO"
+alias dm="doas mkdir -p"
+alias po="doas poweroff"
+alias s="doas pacman -Ss"
+alias p="doas pacman -Syu"
+alias g="git clone --depth 1"
+alias q="doas pacman -Q | grep"
+alias i="doas pacman -S --needed"
+alias yy="xclip -selection clipboard"
+alias startx="startx > /dev/null 2>&1"
+alias pp="xclip -selection clipboard -o"
+alias u="doas pacman -Rnsu --noconfirm"
+alias clean="doas rm -rf /var/cache/pacman/pkg/*"
+
+export LC_COLLATE="C"
+export LANG="en_US.UTF-8"
+export LS_COLORS="di=1;31"
+export QT_QPA_PLATFORMTHEME="gtk2"
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\]\W\[$(tput sgr0)\] $ "' > .bashrc; source .bashrc
+
+printf '! Normal      Bright
+! --------    -------
+! 0 Black      8 Black
+! 1 Red        9 Red
+! 2 Green     10 Green
+! 3 Yellow    11 Yellow
+! 4 Blue      12 Blue
+! 5 Magenta   13 Magenta
+! 6 Cyan      14 Cyan
+! 7 White     15 White
+
+*.color0: #5c6370
+*.color1: #ff6e7a
+*.color2: #c0fa96
+*.color3: #ffd587
+*.color4: #6ebeff
+*.color5: #e387ff
+*.color6: #66deed
+*.color7: #dfe5f2
+*.color8: #5c6370
+*.color9: #ff6e7a
+*.color10: #c0fa96
+*.color11: #ffd587
+*.color12: #6ebeff
+*.color13: #e387ff
+*.color14: #66deed
+*.color15: #dfe5f2
+*.foreground: #dfe5f2
+*.background: #21242b
+*.cursorColor: #dfe5f2
+
+URxvt.scrollBar: 0
+URxvt.cursorBlink: 1
+URxvt.saveline: 5000
+URxvt.letterSpace: -1
+URxvt.matcher.button: 1
+URxvt.internalBorder: 24
+URxvt.url-launcher: firefox
+URxvt.resize-font.show: C-End
+URxvt.resize-font.reset: C-Home
+URxvt.resize-font.bigger: C-Page_Up
+URxvt.termName: rxvt-unicode-256color
+URxvt.resize-font.smaller: C-Page_Down
+URxvt.perl-ext-common: resize-font,selection-to-clipboard
+URxvt.font: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Regular
+URxvt.boldFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Bold
+URxvt.italicFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Italic
+URxvt.boldItalicFont: xft: Roboto Mono:pixelsize=24:antialias=true:autohint=true:style=Bold Italic
+
+st.cwscale: 1.0
+st.chscale: 1.0
+st.borderpx: 24
+st.tabspaces: 8
+st.minlatency: 8
+st.bellvolume: 0
+st.maxlatency: 33
+st.shell: /bin/sh
+st.blinktimeout: 800
+st.termname: st-256color
+st.font: Roboto Mono:pixelsize=24:antialias=true:autohint=true
+
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.hinting: 1
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault' > .Xdefaults
+
 printf '[General]
 AddressRandomization=true
 AddressRandomizationRange=nic
