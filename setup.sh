@@ -197,7 +197,7 @@ printf '#
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-rfkill unblock wifi; amixer set Master 76 unmute > /dev/null; amixer set Speaker 0 mute > /dev/null 2>&1; clear; startx > /dev/null 2>&1' > .bash_profile
+rfkill unblock wifi; amixer set Master 76 unmute > /dev/null 2>&1; amixer set Speaker 0 mute > /dev/null 2>&1; clear; startx > /dev/null 2>&1' > .bash_profile
 
 printf '[General]
 AddressRandomization=true
