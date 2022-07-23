@@ -43,11 +43,6 @@ printf '#!/bin/sh
 
 bspwm' > .xinitrc
 
-printf '
-clear
-
-startx > /dev/null 2>&1' >> .bash_profile
-
 printf 'Section "InputClass"
     Identifier "Mouse0"
     Option "AccelSpeed" "-1"
